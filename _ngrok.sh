@@ -1,7 +1,8 @@
 #!/bin/bash
 cd ~
 
-yum -y install unzip zip
+# ngrokのインストール
+#yum -y install unzip zip
 curl -O https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
 cp ngrok /usr/bin/

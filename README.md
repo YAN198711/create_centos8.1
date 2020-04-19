@@ -4,12 +4,14 @@ Tera Termを起動、下記をコピー&ペースト
 ***
 # はじめに
 ## ①初期化
-rm -f /var/run/yum.pid \
-yum clean all
+#rm -f /var/run/yum.pid \
+#yum clean all
+dnf clean all
 
 ***
 ## ②Gitのインストール
-yum -y install git
+dnf -y install git
+#yum -y install git
 
 ***
 ## ③Gitより実行ファイルをダウンロード
@@ -85,8 +87,13 @@ PYTHON PATH　⇒　```:/root/.pyenv/shims/python3``` 　を右端に追加 \
 例) \
 ```./ngrok authtoken xaUxxxxxx2Rxxxm3xxxxxxxHxkxxxxxxojhFxxxxVExVNxxxx```
 
+3)下記コマンドを実行 \
 ```./create_centos8.1/setup_ngrok.sh```
 
-3)ターミナルもしくは、Cloud9起動後、下記コマンドを入力で port:80,81,82,83 が開通します。\
-ngrok start --all \
-※このターミナルを閉じるとngrokの通信が切れ、Freeメンバーの場合はアドレスが変化します。
+4)ターミナルもしくは、Cloud9起動後、下記コマンドを入力で port:80,81,82,83 が開通します。\
+ターミナルはこちら \
+```ngrok start --all``` \
+Cloud9のworkspaceの中ではこちら \
+```/root/ngrok start --all``` \
+※このターミナルを閉じるとngrokの通信が切れ、Freeメンバーの場合はアドレスが変化します。 \
+そのため、cloud9の1つのタブ(ターミナル)で実行することをお勧めします。
