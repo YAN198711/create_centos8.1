@@ -10,7 +10,7 @@ influxdb
 matplotlib
 numba
 numpy
-pandas
+pandas==0.24.2
 pillow
 pybitflyer
 Pysher
