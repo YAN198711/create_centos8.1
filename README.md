@@ -4,14 +4,11 @@ Tera Termを起動、下記をコピー&ペースト
 ***
 # はじめに
 ## ①初期化
-#rm -f /var/run/yum.pid \
-#yum clean all
 dnf clean all
 
 ***
 ## ②Gitのインストール
 dnf -y install git
-#yum -y install git
 
 ***
 ## ③Gitより実行ファイルをダウンロード
