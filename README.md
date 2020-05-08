@@ -117,12 +117,12 @@ Cloud9のworkspaceの中ではこちら \
 vi /opt/google/chrome/google-chrome
 ```
 
-2)一番下までスクロールし、"i"キーを押し編集モードにする。
-before \
+2)一番下までスクロールし、"i"キーを押し編集モードにする。 \
+*before*
 ```
 exec -a "$0" "$HERRE/chrome" "$@"
 ```
-after \
+*after*
 ```
 exec -a "$0" "$HERRE/chrome" "$@" --no-sandbox --user-data-dir=~
 ```
