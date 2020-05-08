@@ -32,6 +32,9 @@ dnf -y install git
 ### (5)ngrokのインストール（任意）：約5分
 ```./create_centos8.1/_ngrok.sh```
 
+### (6)desktopのインストール（任意）：約5分
+```./create_centos8.1/_desktop.sh```
+
 ## ワンポイント！
 > 複数を一気に構築したい場合、間に　&&　を入れて、文を繋げます。
 
@@ -77,7 +80,7 @@ PYTHON PATH　⇒　```:/root/.pyenv/shims/python3``` 　を右端に追加 \
 2)再起動が完了後、再度Tera Termで接続。 \
 
 > IP : **ConoHa作成後に表示される** \
-> ID : **【newuser】** \
+> ID : **root** \
 > pass : **パスワードを入力 +エンターキー**
 
 ```./ngrok authtoken **ngrok認証Token**``` \
@@ -94,3 +97,34 @@ Cloud9のworkspaceの中ではこちら \
 ```/root/ngrok start --all``` \
 ※このターミナルを閉じるとngrokの通信が切れ、Freeメンバーの場合はアドレスが変化します。 \
 そのため、cloud9の1つのタブ(ターミナル)で実行することをお勧めします。
+
+## ⑧リモートデスクトップで接続する方法
+1)自身のPC(windows)の検索より、リモートデスクトップを検索し実行します。
+
+2)IPを入力する。 \
+> IP : **ConoHa作成後に表示される** \
+
+3)CentOS側の画面に切り替わり、IDおよびPASSを入力する。 \
+> ID : **root** \
+> pass : **パスワードを入力 +エンターキー**
+
+## ⑨rootユーザーでChromeを利用する方法(上級者向け)
+デスクトップをインストールし、rootユーザーでChromeを利用する場合設定を追加する必要があります。 \
+こちらはデスクトップをインストールしない場合は不要な設定です。
+
+1)ターミナルを開き、下記を実行する
+```
+vi /opt/google/chrome/google-chrome
+```
+
+2)一番下までスクロールし、"i"キーを押し編集モードにする。
+before \
+```
+exec -a "$0" "$HERRE/chrome" "$@"
+```
+after \
+```
+exec -a "$0" "$HERRE/chrome" "$@" --no-sandbox --user-data-dir=~
+```
+
+3)"ESC"キーを押し、順に":"キー、"w"キー、"q"キーを押す。
