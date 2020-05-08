@@ -6,7 +6,7 @@ deap
 discord
 Flask
 Flask-Classy
-googleapiclient
+google-api-python-client
 influxdb
 matplotlib
 numba
