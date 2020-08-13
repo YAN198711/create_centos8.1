@@ -5,7 +5,7 @@ cd ~
 # Chrome Driverのインストール
 dnf -y install libX11 GConf2 fontconfig
 #yum -y install libX11 GConf2 fontconfig ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts wget
-wget https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 mv chromedriver /usr/local/bin/
 chmod 777 /usr/local/bin/chromedriver
