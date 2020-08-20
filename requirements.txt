@@ -25,6 +25,7 @@ pytz
 pyyaml
 retry
 requests
+schedule
 selenium
 simplejson
 sortedcontainers
