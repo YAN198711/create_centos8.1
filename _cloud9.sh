@@ -2,6 +2,18 @@
 
 cd ~
 
+# Pyenvのインストール(2.7.18)
+dnf -y install bzip2-devel openssl-devel readline-devel sqlite-devel tk-devel libffi-devel libxslt-devel
+#yum -y install gcc g++ gcc-c++ kernel-devel bzip2 bzip2-devel openssl openssl-devel readline readline-devel sqlite-devel tk-devel libffi-devel python-devel libxslt-devel libffi-devel
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+pyenv install 2.7.18
+pyenv global 2.7.18
+pyenv rehash
+
+
 # Node.jsのインストール
 curl -sL https://rpm.nodesource.com/setup_12.x | bash -
 dnf -y install nodejs
