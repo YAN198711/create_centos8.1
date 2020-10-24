@@ -28,4 +28,5 @@ scripts/install-sdk.sh
 firewall-cmd --permanent --zone=public --add-port=8080/tcp
 firewall-cmd --reload
 
-npm install forever -g
+# foreverをインストール
+npm install -g forever
