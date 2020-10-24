@@ -23,11 +23,11 @@ dnf -y install git
 ### (2)google-chromeのインストール（任意）：約1分
 ```./create_centos8.1/_chrome.sh```
 
-### (3)pythonのインストール（任意）：約10分
-```./create_centos8.1/_python.sh```
-
-### (4)cloud9のインストール（任意）：約5分
+### (3)cloud9のインストール（任意）：約5分
 ```./create_centos8.1/_cloud9.sh```
+
+### (4)pythonのインストール（任意）：約10分
+```./create_centos8.1/_python.sh```
 
 ### (5)ngrokのインストール（任意）：約5分
 ```./create_centos8.1/_ngrok.sh```
