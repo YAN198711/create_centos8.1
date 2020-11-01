@@ -21,6 +21,7 @@ python-binance
 python-dateutil
 python-quoine
 python-rapidjson
+python-socketio
 pytz
 pyyaml
 retry
